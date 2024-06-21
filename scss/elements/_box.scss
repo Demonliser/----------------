@@ -1,0 +1,58 @@
+.box {
+	padding: 40px;
+	width: 100%;
+	background: linear-gradient(216.8deg, rgba(41, 39, 70, 0.2) 5.55%, rgba(56, 54, 99, 0.2) 98.31%);
+	border-radius: 16px;
+	position: relative;
+	z-index: 1;
+	backdrop-filter: blur(18px);
+	@media (max-width: 1024px) {
+		width: 100%;
+		box-sizing: border-box;
+	}
+	&.single {
+		width: 100%;
+		box-sizing: border-box;
+		&::before {
+			content: "";
+			position: absolute;
+			width: 40px;
+			height: 40px;
+			top: 0;
+			right: 0;
+			background: url(/img/Services.png) no-repeat;
+		}
+	}
+	h4 {
+		padding-bottom: 20px;
+	}
+}
+.double {
+	display: flex;
+	gap: 20px;
+	@media (max-width: 1024px) {
+		flex-direction: column;
+	}
+	& .box:first-child {
+		&::before {
+			content: "";
+			position: absolute;
+			width: 40px;
+			height: 40px;
+			top: 0;
+			right: 0;
+			background: url(/img/Marketing.png) no-repeat;
+		}
+	}
+	& .box:last-child {
+		&::before {
+			content: "";
+			position: absolute;
+			width: 40px;
+			height: 40px;
+			top: 0;
+			right: 0;
+			background: url(/img/Geo.png) no-repeat;
+		}
+	}
+}

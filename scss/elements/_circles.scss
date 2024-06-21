@@ -1,0 +1,15 @@
+.circles {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 7px;
+	@media  (max-width: 1025px){
+		justify-content: center;
+	}
+	&__item {
+		font-weight: 500;
+		border: 1px solid #FFB876;
+		border-radius: 100px;
+		padding: 8px 20px;
+	}
+}
